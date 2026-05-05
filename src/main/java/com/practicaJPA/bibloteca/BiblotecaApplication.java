@@ -28,6 +28,10 @@ public class BiblotecaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 	}
+	@GetMapping("/")
+	public String home() {
+	    return "redirect:/inicio";
+	}
 
 	@GetMapping("/inicio")
 	public String inicio() {
