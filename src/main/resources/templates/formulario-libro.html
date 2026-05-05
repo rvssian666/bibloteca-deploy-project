@@ -11,11 +11,10 @@
             <h3>Nuevo Libro</h3>
         </div>
         <div class="card-body">
-            <!-- El th:object coincide con el 'new Libro()' del controlador -->
             <form th:action="@{/altaLibro}" th:object="${libro}" method="post">
                 <div class="mb-3">
                     <label class="form-label">Título:</label>
-                    <input type="text" th:field=${titulo} class="form-control" required>
+                    <input type="text" th:field="*{titulo}" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Autor:</label>

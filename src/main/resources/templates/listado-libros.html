@@ -7,8 +7,7 @@
 </head>
 <body class="container mt-4">
     <h2>Libros en la Biblioteca</h2>
-    
-    <!-- Buscador (Requisito de tu tema) -->
+
     <form th:action="@{/listadoLibro}" method="get" class="row g-3 mb-4">
         <div class="col-auto">
             <input type="text" name="autor" class="form-control" placeholder="Buscar por autor...">
@@ -16,7 +15,7 @@
         <div class="col-auto">
             <button type="submit" class="btn btn-secondary">Buscar</button>
         </div>
-    </nav>
+    </form>
 
     <table class="table table-striped">
         <thead class="table-dark">

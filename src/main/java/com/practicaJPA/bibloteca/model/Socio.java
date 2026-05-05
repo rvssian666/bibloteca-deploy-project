@@ -12,21 +12,21 @@ public class Socio {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String nombre;
-    private String apellido;
+    private String apellidos;
     private String dni;
-    private LocalDate fecha_alta;
+    private LocalDate fechaAlta;
 
     public Socio() {
         super();
     }
 
-    public Socio(Integer id, String nombre, String apellido, String dni, LocalDate fecha_alta) {
+    public Socio(Integer id, String nombre, String apellidos, String dni, LocalDate fechaAlta) {
         super();
         this.id = id;
         this.nombre = nombre;
-        this.apellido = apellido;
+        this.apellidos = apellidos;
         this.dni = dni;
-        this.fecha_alta = fecha_alta;
+        this.fechaAlta = fechaAlta;
     }
 
     public int getId() {
@@ -45,12 +45,12 @@ public class Socio {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public String getDni() {
@@ -61,16 +61,16 @@ public class Socio {
         this.dni = dni;
     }
 
-    public LocalDate getFecha_alta() {
-        return fecha_alta;
+    public LocalDate getFechaAlta() {
+        return fechaAlta;
     }
 
-    public void setFecha_alta(LocalDate fecha_alta) {
-        this.fecha_alta = fecha_alta;
+    public void setFechaAlta(LocalDate fechaAlta) {
+        this.fechaAlta = fechaAlta;
     }
 
     @Override
     public String toString() {
-        return "Socio [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", fecha_alta=" + fecha_alta + "]";
+        return "Socio [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", fechaAlta=" + fechaAlta + "]";
     }
 }
