@@ -1,43 +1,63 @@
-﻿# Biblioteca Deploy Project
-
-## Descripcion del Proyecto
-
-**Biblioteca Deploy Project** es una aplicacion web desarrollada con **Spring Boot 3.3.0** que permite gestionar una biblioteca digital. La aplicacion facilita la administracion de libros y socios, proporcionando funcionalidades para listar y dar de alta tanto libros como miembros de la biblioteca.
-
-### Caracteristicas principales:
-- Gestion completa de libros (listar y crear)
-- Gestion de socios/miembros de la biblioteca (listar y crear)
-- Interfaz web moderna con Thymeleaf
-- Base de datos MySQL con persistencia JPA
-- Listo para desplegar en plataformas como Railway
-- Arquitectura escalable y modular
+﻿![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.0-brightgreen?logo=spring)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-✓-green)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)
+![Railway](https://img.shields.io/badge/Railway-Deployed-purple)
 
 ---
 
-## Requisitos Previos
+# 📚 Biblioteca Deploy Project
 
-Antes de ejecutar el proyecto, asegurate de tener instalado lo siguiente:
+## 📋 Descripción del Proyecto
 
-| Requisito | Version | Descripcion |
+**Biblioteca Deploy Project** es una aplicación web desarrollada con **Spring Boot 3.3.0** que permite gestionar una biblioteca digital. La aplicación facilita la administración de libros y socios, proporcionando funcionalidades para listar y dar de alta tanto libros como miembros de la biblioteca.
+
+### ✨ Características principales:
+- ✅ Gestión completa de libros (listar y crear)
+- ✅ Gestión de socios/miembros de la biblioteca (listar y crear)
+- 🎨 Interfaz web moderna con **Thymeleaf + Bootstrap 5**
+- 🗄️ Persistencia de datos con **JPA / Hibernate + MySQL**
+- 🚀 Desplegado en **Railway** (cloud)
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Versión | Propósito |
+|------------|---------|-----------|
+| ☕ Java | 17 | Lenguaje de programación |
+| 🌱 Spring Boot | 3.3.0 | Framework web |
+| 🗄️ Spring Data JPA | 3.3.0 | Persistencia de datos |
+| 🎨 Thymeleaf | 3.3.0 | Motor de plantillas |
+| 🐬 MySQL | 8.0 | Base de datos |
+| 📦 Maven | 3.6+ | Gestor de dependencias |
+| 🚀 Railway | - | Plataforma de despliegue |
+
+---
+
+## 🔧 Requisitos Previos
+
+Antes de ejecutar el proyecto localmente, asegúrate de tener instalado lo siguiente:
+
+| Requisito | Versión | Descripción |
 |-----------|---------|-------------|
-| **Java** | 17+ | Lenguaje de programacion |
-| **Maven** | 3.6+ | Gestor de dependencias |
-| **MySQL** | 5.7+ | Base de datos |
-| **Spring Boot** | 3.3.0 | Framework web |
-| **Git** | 2.0+ | Control de versiones |
+| ☕ **Java** | 17+ | Lenguaje de programación |
+| 📦 **Maven** | 3.6+ | Gestor de dependencias |
+| 🐬 **MySQL** | 5.7+ | Base de datos |
+| 🔗 **Git** | 2.0+ | Control de versiones |
 
 ---
 
-## Pasos para Ejecutar el Proyecto
+## 🚀 Pasos para Ejecutar el Proyecto (Local)
 
-### 1. Clonar el Repositorio
+### 1️⃣ Clonar el Repositorio
 
 ```bash
 git clone https://github.com/rvssian666/bibloteca-deploy-project.git
 cd bibloteca-deploy-project
 ```
 
-### 2. Crear la Base de Datos
+### 2️⃣ Crear la Base de Datos
 
 Abre MySQL y ejecuta el script SQL incluido:
 
@@ -59,7 +79,7 @@ source schema.sql;
 mysql -u root -p < schema.sql
 ```
 
-### 3. Configurar application.properties
+### 3️⃣ Configurar application.properties
 
 Edita el archivo `src/main/resources/application.properties` con tus credenciales de MySQL:
 
@@ -80,16 +100,16 @@ spring.thymeleaf.prefix=classpath:/templates/
 spring.thymeleaf.suffix=.html
 ```
 
-### 4. Compilar y Ejecutar
+### 4️⃣ Compilar y Ejecutar
 
-**Opcion A: Usando Maven directamente**
+**Opción A: Usando Maven directamente**
 
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-**Opcion B: Usar el wrapper de Maven (recomendado)**
+**Opción B: Usar el wrapper de Maven (recomendado)**
 
 ```bash
 # En Windows
@@ -99,9 +119,9 @@ mvnw.cmd spring-boot:run
 ./mvnw spring-boot:run
 ```
 
-### 5. Acceder a la Aplicacion
+### 5️⃣ Acceder a la Aplicación
 
-Una vez que la aplicacion este ejecutandose, abre tu navegador y accede a:
+Una vez que la aplicación esté ejecutándose, abre tu navegador y accede a:
 
 ```
 http://localhost:8080/inicio
@@ -109,9 +129,9 @@ http://localhost:8080/inicio
 
 ---
 
-## Capturas de Pantalla de las Paginas Principales
+## 📸 Capturas de Pantalla
 
-### Pagina de Inicio
+### Página de Inicio
 ![Inicio](docs/screenshots/inicio.png)
 
 ### Listado de Libros
@@ -126,43 +146,45 @@ http://localhost:8080/inicio
 ### Formulario de Alta de Socio
 ![Alta de Socio](docs/screenshots/formulario-socio.png)
 
-### Pagina de Error
+### Página de Error
 ![Error](docs/screenshots/error.png)
 
 ---
 
-## Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
 bibloteca-deploy-project/
-+-- src/
-|   +-- main/
-|   |   +-- java/
-|   |   |   +-- com/practicaJPA/bibloteca/
-|   |   |       +-- BiblotecaApplication.java      # Clase principal (controlador)
-|   |   |       +-- model/                          # Entidades JPA
-|   |   |       +-- Repository/                     # Interfaces Repository
-|   |   +-- resources/
-|   |       +-- application.properties              # Configuracion
-|   |       +-- templates/                          # Vistas Thymeleaf
-|   |           +-- inicio.html
-|   |           +-- listado-libros.html
-|   |           +-- listado-socios.html
-|   |           +-- formulario-libro.html
-|   |           +-- formulario-socio.html
-|   |           +-- error.html
-|   +-- test/                                       # Tests unitarios
-+-- pom.xml                                         # Configuracion Maven
-+-- schema.sql                                      # Script de base de datos
-+-- Procfile                                        # Configuracion para Railway
-+-- mvnw                                            # Maven wrapper (Linux/Mac)
-+-- mvnw.cmd                                        # Maven wrapper (Windows)
-+-- README.md                                       # Este archivo
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/practicaJPA/bibloteca/
+│   │   │       ├── BiblotecaApplication.java      # Clase principal (controlador)
+│   │   │       ├── model/                          # Entidades JPA (Libro, Socio)
+│   │   │       └── Repository/                     # Interfaces JpaRepository
+│   │   └── resources/
+│   │       ├── application.properties              # Configuración
+│   │       └── templates/                          # Vistas Thymeleaf
+│   │           ├── inicio.html
+│   │           ├── listado-libros.html
+│   │           ├── listado-socios.html
+│   │           ├── formulario-libro.html
+│   │           ├── formulario-socio.html
+│   │           └── error.html
+│   └── test/                                       # Tests unitarios
+├── docs/
+│   └── screenshots/                                # Capturas de pantalla
+├── pom.xml                                         # Configuración Maven
+├── schema.sql                                      # Script de base de datos
+├── Procfile                                        # Configuración para Railway
+├── mvnw                                            # Maven wrapper (Linux/Mac)
+├── mvnw.cmd                                        # Maven wrapper (Windows)
+└── README.md                                       # Este archivo
 ```
 
 ---
 
-## Base de Datos
+## 🗄️ Base de Datos
 
 ### Tablas Principales
 
@@ -190,64 +212,53 @@ CREATE TABLE IF NOT EXISTS socio (
 
 ---
 
-## Dependencias Principales
+## 🌐 Despliegue en Railway
 
-| Dependencia | Version | Proposito |
-|-------------|---------|----------|
-| Spring Boot Starter Web | 3.3.0 | Framework web |
-| Spring Boot Starter Data JPA | 3.3.0 | Persistencia de datos |
-| Spring Boot Starter Thymeleaf | 3.3.0 | Motor de plantillas |
-| MySQL Connector/J | Latest | Driver MySQL |
-| Spring Boot Starter Test | 3.3.0 | Testing |
-
----
-
-## Despliegue en Railway
-
-El proyecto esta desplegado en **Railway** y funciona correctamente.
+El proyecto está desplegado en **Railway** y funcionando correctamente.
 
 ### URL del despliegue:
-
-**https://bibloteca-deploy-project-production.up.railway.app/inicio**
+**🔗 [https://bibloteca-deploy-project-production.up.railway.app/inicio](https://bibloteca-deploy-project-production.up.railway.app/inicio)**
 
 ### Pasos para desplegar:
 
 1. Conecta tu repositorio GitHub a Railway
-2. Railway detectara automaticamente la aplicacion Maven
+2. Railway detectará automáticamente la aplicación Maven
 3. Configura las variables de entorno MySQL en Railway
-4. El deploy se realizara automaticamente
+4. El deploy se realizará automáticamente
 
 ---
 
-## Solucion de Problemas
+## ❓ Solución de Problemas
 
 ### Error: "Cannot connect to database"
-Solucion: Verifica que MySQL esta corriendo y que las credenciales en application.properties son correctas.
+**Solución:** Verifica que MySQL está corriendo y que las credenciales en `application.properties` son correctas.
 
 ### Error: "Port 8080 already in use"
-Solucion: Cambia el puerto en application.properties: server.port=8081
+**Solución:** Cambia el puerto en `application.properties`: `server.port=8081`
 
 ### Error: "Maven build failure"
-Solucion: Ejecuta: mvn clean install -U
+**Solución:** Ejecuta `mvn clean install -U` para forzar la actualización de dependencias.
 
 ---
 
-## Autor
+## 👤 Autor
 
-**Alexander Fuentes Valladares** - [GitHub Profile](https://github.com/rvssian666)
+**Alexander Fuentes Valladares**
 
----
-
-## Licencia
-
-Este proyecto esta bajo licencia libre. Usalo como consideres necesario.
+[![GitHub](https://img.shields.io/badge/GitHub-rvssian666-181717?logo=github)](https://github.com/rvssian666)
 
 ---
 
-## Soporte
+## 📄 Licencia
 
-Tienes problemas? Abre un [issue en GitHub](https://github.com/rvssian666/bibloteca-deploy-project/issues)
+Este proyecto está bajo licencia libre. Úsalo como consideres necesario.
 
 ---
 
-**Ultima actualizacion:** 2026-05-08
+## 📞 Soporte
+
+¿Tienes problemas o sugerencias? Abre un [issue en GitHub](https://github.com/rvssian666/bibloteca-deploy-project/issues).
+
+---
+
+**Última actualización:** 2026-05-08
