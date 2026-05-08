@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS libro (
 CREATE TABLE IF NOT EXISTS socio (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
-    apellido VARCHAR(100),
+    apellidos VARCHAR(100),
     dni VARCHAR(15),
     fecha_alta DATE
 );
