@@ -132,22 +132,13 @@ http://localhost:8080/inicio
 ## 📸 Capturas de Pantalla
 
 ### Página de Inicio
-![Inicio](docs/screenshots/inicio.png)
+![Inicio](docs/screenshots/Inicio-html.png)
 
 ### Listado de Libros
 ![Listado de Libros](docs/screenshots/listado-libros.png)
 
-### Formulario de Alta de Libro
-![Alta de Libro](docs/screenshots/formulario-libro.png)
-
 ### Listado de Socios
 ![Listado de Socios](docs/screenshots/listado-socios.png)
-
-### Formulario de Alta de Socio
-![Alta de Socio](docs/screenshots/formulario-socio.png)
-
-### Página de Error
-![Error](docs/screenshots/error.png)
 
 ---
 
