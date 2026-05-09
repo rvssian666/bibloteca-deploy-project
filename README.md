@@ -132,7 +132,7 @@ http://localhost:8080/inicio
 ## 📸 Capturas de Pantalla
 
 ### Página de Inicio
-![Inicio](docs/screenshots/Inicio-html.png)
+![Inicio](docs/screenshots/inicio-html.png)
 
 ### Listado de Libros
 ![Listado de Libros](docs/screenshots/listado-libros.png)
